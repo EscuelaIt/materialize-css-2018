@@ -1,0 +1,124 @@
+/* Custom Properties */
+:root {
+  --main-font: 'Raleway';
+  --alternate-font: sans-serif;
+  --font-size: 16px;
+  --line-height: 1.6;
+
+  --main-color: #0096D9;
+  --main-modal-color: rgba(0, 150, 217, .75);
+  --second-color: #171226;
+  --second-modal-color: rgba(23, 18, 38, .75);
+
+  --bg-color: #FFF;
+  --bg-modal-color: rgba(0, 0, 0, .25);
+  --bg-alternate-color: #F3F3F3;
+  --border-color: #DDD;
+
+  --text-color: #333;
+  --title-color: var(--second-color);
+
+  --link-color: var(--main-color);
+  --link-hover-color: var(--second-color);
+
+  --nav-height: 56px;
+}
+
+/* Reset Styles */
+html {
+  font-family: var(--main-font), var(--alternate-font);
+  font-size: var(--font-size);
+  line-height:  var(--line-height);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+  transition: all .3s ease-out;
+}
+
+a:hover { color: var(--link-hover-color); }
+
+::selection {
+  background-color: var(--main-color);
+  color: var(--second-color);
+}
+
+/* Navbar Materialize */
+nav {
+  background-color: var(--second-color);
+  height: var(--nav-height);
+  line-height: var(--nav-height);
+}
+
+.brand-logo img { max-height: var(--nav-height); }
+
+.sidenav-trigger:hover { color: var(--main-color); }
+
+.sidenav li:hover { background-color: var(--main-modal-color); }
+
+.sidenav {
+  background-color: var(--second-modal-color);
+  top: var(--nav-height);
+}
+
+.sidenav li > a,
+.desktop-nav {
+  color: var(--main-color);
+  font-size: 1.25rem;
+  font-weight: bold;
+  transition: all .3s ease;
+}
+
+.sidenav li > a:hover { color: var(--bg-color); }
+
+.desktop-nav a:hover {
+  color: var(--bg-color);
+  background-color: var(--main-modal-color);
+}
+
+.sidenav-overlay { z-index: 996; }
+
+/* Sticky footer Materialize */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main { flex: 1 0 auto; }
+
+/* page-footer Materialize */
+.page-footer {
+  color: var(--text-color);
+  background-color: var(--bg-alternate-color);
+}
+
+/* SocialMedia */
+.SocialMedia {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+/* Footer-copy */
+@media only screen and (min-width: 993px) {
+  .Footer-copy { float: left; }
+}
+
+/* Sentence */
+.Sentence {
+  padding: 1rem;
+  text-align: center;
+  font-family: 'Permanent Marker', sans-serif;
+  font-size: 3vw;
+}
+
+.Sentence blockquote {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.Sentence cite { font-size: 2vw; }
