@@ -11,7 +11,7 @@
   --second-modal-color: rgba(23, 18, 38, .75);
 
   --bg-color: #FFF;
-  --bg-modal-color: rgba(0, 0, 0, .25);
+  --bg-modal-color: rgba(0, 0, 0, .5);
   --bg-alternate-color: #F3F3F3;
   --border-color: #DDD;
 
@@ -79,6 +79,7 @@ nav {
   background-color: var(--main-modal-color);
 }
 
+/* Cuando queramos una .navbar-fixed, el overlay del menu móvil tapa los enlaces, hay que aplicarle este valor de z-index al .sidenav-overlay, para que se vuelvan interactivos nuevamente */
 .sidenav-overlay { z-index: 996; }
 
 /* Sticky footer Materialize */
@@ -122,3 +123,78 @@ main { flex: 1 0 auto; }
 }
 
 .Sentence cite { font-size: 2vw; }
+
+/* HeroImage */
+.HeroImage {
+  margin-top: -.5rem;
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-image: var(--bg-url);
+  background-attachment: var(--bg-attach);
+  background-size: var(--bg-size);
+  background-position-x: var(--bg-x);
+  background-position-y: var(--bg-y);
+}
+
+.HeroImage > div {
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-modal-color);
+}
+
+.HeroImage h2 {
+  padding: 0 1rem;
+  text-align: center;
+  font-family: 'Raleway';
+  font-weight: bold;
+  font-size: 5vw;
+  color: var(--bg-color);
+}
+
+.HeroImage span { display: block; }
+
+/* MarathonHistory */
+.MarathonHistory .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.MarathonHistory .col {
+  display: flex;
+  flex-direction: column;
+}
+
+.MarathonHistory img {
+  flex: auto;
+  object-fit: cover;
+}
+
+/* HeroBio */
+.HeroBio p { font-size: 1.25rem; }
+
+/* MarathonsLogos */
+.MarathonsLogos .col {
+  background-color: var(--bg-color);
+  transition: all .3s ease-out;
+}
+
+.MarathonsLogos .col:hover { filter: invert(1); }
+
+/* MarathonsCards */
+.MarathonsCards .card-title {
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  background-color: var(--bg-modal-color);
+}
+
+.MarathonsCards .card-action a {
+  color: var(--link-color) !important;
+  text-transform: lowercase !important;
+}
+
+.MarathonsCards .card-action a:hover { color: var(--link-hover-color) !important; }
