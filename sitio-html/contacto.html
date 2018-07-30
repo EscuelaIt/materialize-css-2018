@@ -69,10 +69,67 @@
       </li>
     </ul>
   </header>
+  <header class="HeroImage" style="
+        --bg-url: url(../img/header-contact.jpg);
+        --bg-attach: fixed;
+        --bg-size: cover;
+        --bg-x: center;
+        --bg-y: center;
+      ">
+    <div>
+      <h2>
+        <span>¿Te gusto este sitio?</span>
+        <span>Dejános tus comentarios</span>
+      </h2>
+    </div>
+  </header>
   <main>
-    <h1>Contacto</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi itaque voluptatibus doloremque dolore corporis dicta
-      libero consequatur laudantium voluptas accusamus nulla quaerat at aliquam, amet, ex repudiandae? Sit, blanditiis perferendis?</p>
+    <div class="container">
+      <form class="row">
+        <div class="input-field col s12 center">
+          <legend class="flow-text">
+            Contáctanos
+          </legend>
+        </div>
+        <div class="input-field col s10 offset-s1 l8 offset-l2">
+          <input type="text" id="nombre" name="nombre" class="validate" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$">
+          <label for="nombre">Nombre</label>
+        </div>
+        <div class="input-field col s10 offset-s1 l8 offset-l2">
+          <input type="email" id="email" name="email" class="validate" pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$">
+          <label for="email">Email</label>
+        </div>
+        <div class="input-field col s10 offset-s1 l8 offset-l2">
+          <input id="asunto" name="asunto" type="text" class="validate">
+          <label for="asunto">Asunto</label>
+        </div>
+        <div class="input-field col s10 offset-s1 l8 offset-l2">
+          <div class="row center">
+            <p class="col s6">
+              <label>
+                <input name="genero" type="radio" class="with-gap" checked />
+                <span>Masculino</span>
+              </label>
+            </p>
+            <p class="col s6">
+              <label>
+                <input name="genero" type="radio" class="with-gap" checked />
+                <span>Femenino</span>
+              </label>
+            </p>
+          </div>
+        </div>
+        <div class="input-field col s10 offset-s1 l8 offset-l2">
+          <textarea name="comentarios" id="comentarios" cols="30" rows="10" class="validate  materialize-textarea"></textarea>
+          <label for="comentarios">Comentarios</label>
+        </div>
+        <div class="input-field col s12 center">
+          <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </form>
+    </div>
   </main>
   <footer class="page-footer">
     <div class="container">
